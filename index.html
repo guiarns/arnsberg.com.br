@@ -2,8 +2,9 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Em breve</title>
+  <title>Arnsberg — Em breve</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -16,19 +17,69 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
     }
+
+    /* “placa” elegante para a logo */
+    .logo-frame{
+      padding: 14px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+    }
+
+    .logo{
+      height: 64px;
+      width: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 0;
+    }
+
     p {
       opacity: 0.85;
+      max-width: 420px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    @media (max-width: 600px){
+      .logo{ height: 52px; }
+      h1{ font-size: 2rem; }
     }
   </style>
 </head>
+
 <body>
-  <div>
+  <div class="container">
+
+    <!-- LOGO -->
+    <div class="logo-frame">
+      <img 
+        src="arnslogo2.png"
+        alt="Arnsberg"
+        class="logo"
+      >
+    </div>
+
+    <!-- TEXTO -->
     <h1>Aguarde 🚀</h1>
-    <p>Estamos preparando algo especial.<br>Em breve, novidades.</p>
+    <p>
+      Estamos preparando algo especial.<br>
+      Em breve, novidades.
+    </p>
+
   </div>
 </body>
 </html>
