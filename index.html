@@ -31,22 +31,15 @@
       padding: 32px 20px;
     }
 
-    /* LOGO SEM FUNDO — flutuando sobre o site */
-    .logo-frame{
-      padding: 0;
-      background: none;
-      border: none;
-      box-shadow: none;
-    }
-
+    /* Logo transparente “flutuando” no fundo do site */
     .logo{
-      height: 110px;                 /* <<< logo maior */
+      height: 130px;
       width: auto;
       display: block;
       object-fit: contain;
       filter:
         drop-shadow(0 18px 40px rgba(0,0,0,0.65))
-        drop-shadow(0 0 40px rgba(212,175,55,0.25)); /* halo dourado sutil */
+        drop-shadow(0 0 36px rgba(212,175,55,0.22));
     }
 
     h1 {
@@ -64,7 +57,7 @@
     }
 
     @media (max-width: 600px){
-      .logo{ height: 88px; }
+      .logo{ height: 100px; }
       h1{ font-size: 2.1rem; }
     }
   </style>
@@ -73,16 +66,12 @@
 <body>
   <div class="container">
 
-    <!-- LOGO DIRETO SOBRE O FUNDO -->
-    <div class="logo-frame">
-      <img
-        src="arnslogo2.png"
-        alt="Arnsberg"
-        class="logo"
-      >
-    </div>
+    <img
+      src="arnslogo2-transparente.png"
+      alt="Arnsberg"
+      class="logo"
+    >
 
-    <!-- TEXTO -->
     <h1>Aguarde 🚀</h1>
     <p>
       Estamos preparando algo especial.<br>
