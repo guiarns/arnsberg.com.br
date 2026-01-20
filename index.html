@@ -10,8 +10,7 @@
       margin: 0;
       min-height: 100vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
       background: radial-gradient(
         circle at 50% 0%,
         #111827 0%,
@@ -20,31 +19,22 @@
       );
       color: #ffffff;
       font-family: Arial, sans-serif;
-      text-align: center;
     }
 
-    .container{
+    /* Conteúdo central */
+    .main {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
-      padding: 32px 20px;
-    }
-
-    /* Logo em destaque, flutuando no fundo */
-    .logo{
-      height: 165px; /* aumentada */
-      width: auto;
-      object-fit: contain;
-      margin-bottom: 10px;
-      filter:
-        drop-shadow(0 20px 45px rgba(0,0,0,0.65))
-        drop-shadow(0 0 42px rgba(212,175,55,0.25));
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
     }
 
     h1 {
       font-size: 2.6rem;
-      margin: 0;
+      margin: 0 0 16px 0;
       font-weight: 700;
     }
 
@@ -56,29 +46,47 @@
       font-size: 1.05rem;
     }
 
+    /* Logo no rodapé */
+    .footer {
+      display: flex;
+      justify-content: center;
+      padding: 26px 20px 34px;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      object-fit: contain;
+      filter:
+        drop-shadow(0 14px 32px rgba(0,0,0,0.6))
+        drop-shadow(0 0 28px rgba(212,175,55,0.22));
+      opacity: 0.95;
+    }
+
     @media (max-width: 600px){
-      .logo{ height: 130px; }
-      h1{ font-size: 2.1rem; }
+      h1 { font-size: 2.1rem; }
+      .logo { height: 70px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
+  <main class="main">
+    <h1>Aguarde</h1>
+    <p>
+      Estamos preparando algo especial.<br>
+      Em breve, novidades.
+    </p>
+  </main>
+
+  <footer class="footer">
     <img
       src="arnslogo2-transparente.png"
       alt="Arnsberg"
       class="logo"
     >
+  </footer>
 
-    <h1>Aguarde</h1>
-
-    <p>
-      Estamos preparando algo especial.<br>
-      Em breve, novidades.
-    </p>
-
-  </div>
 </body>
 </html>
