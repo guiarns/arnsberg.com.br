@@ -12,12 +12,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(
-        circle at top,
-        #111827 0%,
-        #0f172a 45%,
-        #020617 100%
-      );
+      background: radial-gradient(circle at 50% 0%, #111827 0%, #0f172a 45%, #020617 100%);
       color: #ffffff;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -27,28 +22,27 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 26px;
-      padding: 24px;
+      gap: 22px;
+      padding: 28px 18px;
     }
 
-    /* PLACA PREMIUM DA LOGO */
+    /* Placa premium para a logo */
     .logo-frame{
-      padding: 18px 28px;
-      border-radius: 26px;
+      padding: 14px 22px;
+      border-radius: 22px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.18);
-      box-shadow: 0 28px 70px rgba(0,0,0,0.55);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55);
       backdrop-filter: blur(8px);
-      max-width: 340px;
     }
 
+    /* Logo com largura fixa para não virar “quadrado” */
     .logo{
-      height: 64px;
-      width: auto;
-      max-width: 100%;
+      height: 56px;
+      width: 260px;
+      object-fit: contain;
       display: block;
       border-radius: 12px;
-      object-fit: contain;
     }
 
     h1 {
@@ -58,15 +52,15 @@
     }
 
     p {
+      margin: 0;
       opacity: 0.85;
       max-width: 460px;
       line-height: 1.45;
-      margin: 0;
       font-size: 1rem;
     }
 
     @media (max-width: 600px){
-      .logo{ height: 52px; }
+      .logo{ height: 48px; width: 220px; }
       h1{ font-size: 2rem; }
     }
   </style>
@@ -75,9 +69,9 @@
 <body>
   <div class="container">
 
-    <!-- LOGO -->
+    <!-- LOGO (arquivo na raiz do repositório) -->
     <div class="logo-frame">
-      <img 
+      <img
         src="arnslogo2.png"
         alt="Arnsberg"
         class="logo"
@@ -86,7 +80,6 @@
 
     <!-- TEXTO -->
     <h1>Aguarde 🚀</h1>
-
     <p>
       Estamos preparando algo especial.<br>
       Em breve, novidades.
